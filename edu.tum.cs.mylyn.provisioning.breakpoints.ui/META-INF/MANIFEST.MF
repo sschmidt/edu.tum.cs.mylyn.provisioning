@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Breakpoints Provisioning UI
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.breakpoints.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.tum.cs.mylyn.internal.provisioning.breakpoints.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ edu.tum.cs.mylyn.provisioning.core;bundle-version="1.0.0",
+ edu.tum.cs.mylyn.provisioning.core.ui;bundle-version="1.0.0",
+ edu.tum.cs.mylyn.provisioning.breakpoints;bundle-version="1.0.0",
+ org.eclipse.debug.ui;bundle-version="3.8.1",
+ org.eclipse.mylyn.commons.core;bundle-version="3.9.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

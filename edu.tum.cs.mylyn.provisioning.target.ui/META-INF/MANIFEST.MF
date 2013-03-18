@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Target Provisioning UI
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.target.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.tum.cs.mylyn.internal.provisioning.target.ui.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.mylyn.commons.core,
+ edu.tum.cs.mylyn.provisioning.core.ui;bundle-version="1.0.0",
+ edu.tum.cs.mylyn.provisioning.core;bundle-version="1.0.0",
+ edu.tum.cs.mylyn.provisioning.target;bundle-version="1.0.0",
+ org.eclipse.pde.ui;bundle-version="3.7.1"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

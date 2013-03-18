@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mylyn Context Provisioning UI
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.core.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.tum.cs.mylyn.internal.provisioning.ui.ProvisioningUIPlugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.equinox.p2.metadata,
+ org.eclipse.mylyn.commons.core;bundle-version="[3.8.0,4.0.0)",
+ org.eclipse.mylyn.context.core,
+ org.eclipse.mylyn.tasks.ui,
+ org.eclipse.mylyn.tasks.core,
+ org.eclipse.core.resources,
+ com.thoughtworks.xstream,
+ org.eclipse.ui.forms;bundle-version="3.5.200",
+ org.eclipse.mylyn.context.tasks.ui;bundle-version="3.9.0",
+ edu.tum.cs.mylyn.provisioning.core;bundle-version="1.0.0",
+ org.eclipse.mylyn.commons.ui;bundle-version="3.9.0",
+ org.eclipse.mylyn.commons.workbench;bundle-version="3.9.0",
+ org.eclipse.mylyn.context.ui;bundle-version="3.9.0",
+ org.eclipse.ui.navigator;bundle-version="3.5.200"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.eclipse.core.resources,
+ org.eclipse.mylyn.context.core,
+ org.eclipse.mylyn.internal.tasks.ui.context
+Export-Package: edu.tum.cs.mylyn.provisioning.ui,
+ edu.tum.cs.mylyn.provisioning.ui.actions
+

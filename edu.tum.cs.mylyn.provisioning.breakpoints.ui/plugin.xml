@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.tum.cs.mylyn.provisioning.core.ui.elementLabelProvider">
+      <elementLabelProvider
+            class="edu.tum.cs.mylyn.internal.provisioning.breakpoints.ui.BreakpointsElementLabelProvider">
+      </elementLabelProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="edu.tum.cs.mylyn.internal.provisioning.breakpoints.ui.Activator$BreakpointsUiStartup">
+      </startup>
+   </extension>
+   <extension
+         point="edu.tum.cs.mylyn.provisioning.core.ui.provisioningTasks">
+      <contextProvisioningTask
+            class="edu.tum.cs.mylyn.internal.provisioning.breakpoints.ui.BreakpointsProvisioningTask">
+      </contextProvisioningTask>
+   </extension>
+   
+ <extension point="org.eclipse.ui.popupMenus"> 
+     <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.breakpoints.removeElements"
+           objectClass="org.eclipse.debug.core.model.IBreakpoint">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.DeleteElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.delete.element"
+            enablesFor="*"
+            icon="icons/elcl16/interest-decrease.gif"
+            id="edu.tum.cs.mylyn.context.contributor.breakpoints.removeElements"
+            label="Delete Element"
+            menubarPath="group.reorganize"
+            tooltip="Mark selected element as uninteresting">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="org.eclipse.debug.core.model.IBreakpoint">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+      <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.breakpoints.provisioningBreakpoint"
+           objectClass="org.eclipse.debug.core.model.IBreakpoint">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.ProvisionElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.provision.element"
+            enablesFor="*"
+            id="edu.tum.cs.mylyn.context.contributor.breakpoints.targetElements"
+            label="Import Breakpoint"
+            menubarPath="group.reorganize"
+            tooltip="Import the selected Breakpoint">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="org.eclipse.debug.core.model.IBreakpoint">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+   </extension>
+</plugin>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Breakpoints Connector Tests
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.breakpoints.tests
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.junit,
+ org.mockito
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Fragment-Host: edu.tum.cs.mylyn.provisioning.breakpoints

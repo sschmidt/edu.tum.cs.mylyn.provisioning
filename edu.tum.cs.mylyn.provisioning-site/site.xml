@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+      mirrorsURL="http://sschmidt.github.com/mylyn-provisioning/">
+   <description name="Mylyn Provisioning Update Site" url="http://sschmidt.github.com/mylyn-provisioning/">
+      Mylyn Provisioning Components
+   </description>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.feature_1.0.0.201303181829.jar" id="edu.tum.cs.mylyn.provisioning.feature" version="1.0.0.201303181829">
+      <category name="mylyn-prov"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.git.feature_1.0.0.201303181829.jar" id="edu.tum.cs.mylyn.provisioning.git.feature" version="1.0.0.201303181829">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.target.feature_1.0.0.201303181829.jar" id="edu.tum.cs.mylyn.provisioning.target.feature" version="1.0.0.201303181829">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.breakpoints.target_1.0.0.201303181829.jar" id="edu.tum.cs.mylyn.provisioning.breakpoints.target" version="1.0.0.201303181829">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <category-def name="mylyn-prov" label="Mylyn Workspace Provisioning Core"/>
+   <category-def name="mylyn-prov-connectors" label="Mylyn Workspace Provisioning Connectors"/>
+</site>

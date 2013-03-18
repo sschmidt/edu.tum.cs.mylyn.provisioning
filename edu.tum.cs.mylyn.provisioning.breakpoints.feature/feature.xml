@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.tum.cs.mylyn.provisioning.breakpoints.target"
+      label="Mylyn Workspace Provisioning Breakpoints Connector"
+      version="1.0.0.qualifier"
+      license-feature="org.eclipse.e4.rcp"
+      license-feature-version="1.1.2.v20130130-191718-91FUvGP7GIX2Kgz-z-gvjMvXV1NS">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="edu.tum.cs.mylyn.provisioning.feature" version="1.0.0.qualifier"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.debug.core" version="3.7.100"/>
+      <import plugin="org.eclipse.mylyn.context.core" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.mylyn.monitor.core" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.ui" version="3.8.0"/>
+      <import plugin="org.eclipse.mylyn.commons.core" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="com.ibm.icu"/>
+      <import plugin="org.eclipse.jface"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.core.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.breakpoints" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.ui" version="3.8.1" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="edu.tum.cs.mylyn.provisioning.breakpoints"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.tum.cs.mylyn.provisioning.breakpoints.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

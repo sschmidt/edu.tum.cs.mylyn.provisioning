@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Git Provisioning Tests
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.git.tests
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit,
+ org.mockito,
+ org.apache.commons.io
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Fragment-Host: edu.tum.cs.mylyn.provisioning.git
+

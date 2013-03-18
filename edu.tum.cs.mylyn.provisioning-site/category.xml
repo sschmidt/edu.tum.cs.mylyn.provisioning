@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.feature_1.0.0.qualifier.jar" id="edu.tum.cs.mylyn.provisioning.feature" version="1.0.0.qualifier">
+      <category name="mylyn-prov"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.breakpoints.target_1.0.0.qualifier.jar" id="edu.tum.cs.mylyn.provisioning.breakpoints.target" version="1.0.0.qualifier">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.git.feature_1.0.0.qualifier.jar" id="edu.tum.cs.mylyn.provisioning.git.feature" version="1.0.0.qualifier">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <feature url="features/edu.tum.cs.mylyn.provisioning.target.feature_1.0.0.qualifier.jar" id="edu.tum.cs.mylyn.provisioning.target.feature" version="1.0.0.qualifier">
+      <category name="mylyn-prov-connectors"/>
+   </feature>
+   <category-def name="mylyn-prov" label="Mylyn Workspace Provisioning Core"/>
+   <category-def name="mylyn-prov-connectors" label="Mylyn Workspace Provisioning Connectors"/>
+</site>

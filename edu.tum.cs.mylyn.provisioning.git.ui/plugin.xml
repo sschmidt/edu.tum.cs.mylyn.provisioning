@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.tum.cs.mylyn.provisioning.core.ui.elementLabelProvider">
+      <elementLabelProvider
+            class="edu.tum.cs.mylyn.provisioning.git.ui.GitElementLabelProvider">
+      </elementLabelProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="edu.tum.cs.mylyn.provisioning.git.ui.Activator$GitUiStartup">
+      </startup>
+   </extension>
+    <extension point="org.eclipse.ui.popupMenus"> 
+     <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.git.removeElements"
+           objectClass="edu.tum.cs.mylyn.provisioning.git.RepositoryWrapper">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.DeleteElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.delete.element"
+            enablesFor="*"
+            icon="icons/elcl16/interest-decrease.gif"
+            id="edu.tum.cs.mylyn.context.contributor.git.removeElements"
+            label="Delete Element"
+            menubarPath="group.reorganize"
+            tooltip="Mark selected element as uninteresting">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="edu.tum.cs.mylyn.provisioning.git.RepositoryWrapper">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+      <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.git.provisionElements"
+           objectClass="edu.tum.cs.mylyn.provisioning.git.RepositoryWrapper">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.ProvisionElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.provision.element"
+            enablesFor="*"
+            id="edu.tum.cs.mylyn.context.contributor.git.provisionElements"
+            label="Clone Repository"
+            menubarPath="group.reorganize"
+            tooltip="Provision element">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="edu.tum.cs.mylyn.provisioning.git.RepositoryWrapper">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+   </extension>
+    <extension
+          point="edu.tum.cs.mylyn.provisioning.core.ui.provisioningTasks">
+       <contextProvisioningTask
+             class="edu.tum.cs.mylyn.provisioning.git.ui.GitProvisioningTask">
+       </contextProvisioningTask>
+    </extension>
+</plugin>

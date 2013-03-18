@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="elementMapper" name="Provisioning Element Mapper" schema="schema/elementMapper.exsd"/>
+   <!--
+   <extension point="org.eclipse.ui.menus">
+    <menuContribution
+          locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+       <command
+             commandId="edu.tum.cs.mylyn.provisioning.context"
+             label="Provision Context"
+             style="push"
+             icon="icons/icon_prov_small.png"
+             >
+          <visibleWhen
+                checkEnabled="false">
+             <or>
+                <iterate
+                      ifEmpty="false">
+                   <adapt
+                         type="org.eclipse.mylyn.tasks.core.ITaskAttachment">
+                      <test
+                            property="org.eclipse.mylyn.task.attachment.isContext"
+                            value="true">
+                      </test>
+                   </adapt>
+                </iterate>
+             </or>
+          </visibleWhen>
+       </command>
+    </menuContribution>
+	</extension>
+   	<extension point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.mylyn.context.ui.commands"
+            id="edu.tum.cs.mylyn.provisioning.context"
+            name="Provision Context">
+      </command>
+      </extension>
+      -->
+</plugin>

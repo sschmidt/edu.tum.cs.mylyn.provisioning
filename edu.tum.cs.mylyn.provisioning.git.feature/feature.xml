@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.tum.cs.mylyn.provisioning.git.feature"
+      label="Mylyn Workspace Provisioning GIT Connector"
+      version="1.0.0.qualifier"
+      license-feature="org.eclipse.e4.rcp"
+      license-feature-version="1.1.2.v20130130-191718-91FUvGP7GIX2Kgz-z-gvjMvXV1NS">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="edu.tum.cs.mylyn.provisioning.feature" version="1.0.0.qualifier"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.mylyn.context.core"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.egit.core"/>
+      <import plugin="org.eclipse.jgit"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.mylyn.commons.core" version="3.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.8.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.io"/>
+      <import plugin="org.eclipse.team.core" version="3.6.100" match="greaterOrEqual"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.core.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="edu.tum.cs.mylyn.provisioning.git" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jgit" version="2.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.egit.ui" version="2.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.8.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.egit.core" version="2.2.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="edu.tum.cs.mylyn.provisioning.git"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.tum.cs.mylyn.provisioning.git.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

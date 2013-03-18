@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+    <extension-point id="elementLabelProvider" name="Provisioning UI Label Provider" schema="schema/elementLabelProvider.exsd"/>
+ 	<extension-point id="provisioningTasks" name="Context Provisioning Tasks" schema="schema/provisioningTasks.exsd"/>
+
+    <extension
+	    name="Provisioning Core Startup"
+	    point="org.eclipse.ui.startup">
+	<startup
+	    class="edu.tum.cs.mylyn.internal.provisioning.ui.ProvisioningUIPlugin$ProvisioningUiStartup">
+	</startup>
+	</extension>
+ 	<extension
+         point="org.eclipse.mylyn.tasks.ui.editors">
+      	<pageFactory
+             id="edu.tum.cs.mylyn.provisioning.core"
+			 class="edu.tum.cs.mylyn.internal.provisioning.ui.editors.ProvisioningEditorPageFactory"/>
+   	</extension>
+      <extension
+          point="org.eclipse.ui.navigator.viewer">
+       <viewerContentBinding
+             viewerId="edu.tum.cs.mylyn.provisioning.context">
+          <includes>
+             <contentExtension
+                   pattern="edu.tum.cs.mylyn.context.contributor.target.content">
+             </contentExtension>
+          </includes>
+       </viewerContentBinding>
+    </extension>
+    <extension
+          point="org.eclipse.ui.navigator.navigatorContent">
+       <navigatorContent
+             contentProvider="edu.tum.cs.mylyn.internal.provisioning.ui.editors.ProvisioningEditorContentProvider"
+             id="edu.tum.cs.mylyn.context.contributor.target.content"
+             labelProvider="edu.tum.cs.mylyn.internal.provisioning.ui.editors.ProvisioningEditorLabelProvider"
+             name="edu.tum.cs.mylyn.context.contributor.target.targetContent"
+             priority="lower">
+          <triggerPoints>
+             <instanceof
+                   value="org.eclipse.core.resources.IWorkspaceRoot">
+             </instanceof>
+          </triggerPoints>
+       </navigatorContent>
+    </extension>
+    
+       <extension point="org.eclipse.ui.commands">
+      <command
+            name="Provision selection"
+            description="Tries to provision the selected element"
+            id="edu.tum.cs.mylyn.provisioning.ui.provision.element"
+            defaultHandler="edu.tum.cs.mylyn.internal.provisioning.ui.commands.ProvisionElementCommandHandler"
+            categoryId="org.eclipse.mylyn.context.ui.commands">
+      </command>
+      </extension>
+       <extension point="org.eclipse.ui.commands">
+      <command
+            name="Delete element"
+            description="Deletes the selected provisioning element"
+            id="edu.tum.cs.mylyn.provisioning.ui.delete.element"
+            defaultHandler="edu.tum.cs.mylyn.internal.provisioning.ui.commands.DeleteElementCommandHandler"
+            categoryId="org.eclipse.mylyn.context.ui.commands">
+      </command>
+    </extension>
+</plugin>

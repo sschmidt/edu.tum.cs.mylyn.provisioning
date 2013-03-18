@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="edu.tum.cs.mylyn.provisioning.core.ui.elementLabelProvider">
+      <elementLabelProvider
+            class="edu.tum.cs.mylyn.internal.provisioning.target.ui.TargetElementLabelProvider">
+      </elementLabelProvider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="edu.tum.cs.mylyn.internal.provisioning.target.ui.Activator$TargetUiStartup">
+      </startup>
+   </extension>
+    <extension point="org.eclipse.ui.popupMenus"> 
+     <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.target.removeElements"
+           objectClass="edu.tum.cs.mylyn.provisioning.target.TargetPlatformReference">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.DeleteElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.delete.element"
+            enablesFor="*"
+            icon="icons/elcl16/interest-decrease.gif"
+            id="edu.tum.cs.mylyn.context.contributor.target.removeElements"
+            label="Delete Element"
+            menubarPath="group.reorganize"
+            tooltip="Mark selected element as uninteresting">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="edu.tum.cs.mylyn.provisioning.target.TargetPlatformReference">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+      <objectContribution
+           adaptable="false"
+           id="edu.tum.cs.mylyn.context.contributor.target.provisionTarget"
+           objectClass="edu.tum.cs.mylyn.provisioning.target.TargetPlatformReference">
+     	<action
+            class="edu.tum.cs.mylyn.provisioning.ui.actions.ProvisionElementAction"
+            definitionId="edu.tum.cs.mylyn.provisioning.ui.provision.element"
+            enablesFor="*"
+            id="edu.tum.cs.mylyn.context.contributor.target.targetElements"
+            label="Apply Target Platform"
+            menubarPath="group.reorganize"
+            tooltip="aktivates the target platform">
+      </action>
+      <visibility>
+      		<and>
+      			<systemProperty
+	               name="org.eclipse.mylyn.context.core.context.active"
+    	           value="true">
+      			</systemProperty>
+	            <objectClass name="edu.tum.cs.mylyn.provisioning.target.TargetPlatformReference">
+	            </objectClass>
+      		</and>
+      </visibility>
+     </objectContribution>
+   </extension>
+    <extension
+          point="edu.tum.cs.mylyn.provisioning.core.ui.provisioningTasks">
+       <contextProvisioningTask
+             class="edu.tum.cs.mylyn.internal.provisioning.target.ui.TargetProvisioningTask">
+       </contextProvisioningTask>
+    </extension>
+</plugin>

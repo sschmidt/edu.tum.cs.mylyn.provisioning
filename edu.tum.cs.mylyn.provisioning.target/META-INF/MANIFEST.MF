@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Target Platform Context Contributor
+Bundle-SymbolicName: edu.tum.cs.mylyn.provisioning.target;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.tum.cs.mylyn.internal.provisioning.target.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.mylyn.context.core,
+ org.eclipse.core.resources,
+ org.eclipse.mylyn.monitor.core,
+ org.eclipse.pde.core;bundle-version="[3.8.0,3.9.0)",
+ org.eclipse.jface;bundle-version="[3.8.0,3.9.0)",
+ org.eclipse.mylyn.commons.core;bundle-version="[3.9.0,4.0.0)",
+ edu.tum.cs.mylyn.provisioning.core.ui;bundle-version="1.0.0",
+ edu.tum.cs.mylyn.provisioning.core;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Service-Component: OSGI-INF/targetcomponent.xml
+Export-Package: edu.tum.cs.mylyn.provisioning.target
+
+

@@ -1,0 +1,27 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.all
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[submodule "org.eclipse.mylyn"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.git
+[submodule "org.eclipse.mylyn.builds"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.builds.git
+[submodule "org.eclipse.mylyn.commons"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.commons.git
+[submodule "org.eclipse.mylyn.context"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.context.git
+[submodule "org.eclipse.mylyn.docs"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.docs.git
+[submodule "org.eclipse.mylyn.reviews"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.reviews.git
+[submodule "org.eclipse.mylyn.tasks"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.tasks.git
+[submodule "org.eclipse.mylyn.versions"]
+	url = git://git.eclipse.org/gitroot/mylyn/org.eclipse.mylyn.versions.git

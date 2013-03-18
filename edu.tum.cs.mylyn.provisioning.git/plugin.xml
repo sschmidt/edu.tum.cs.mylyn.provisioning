@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.mylyn.context.core.contributor">
+      <contextContributor
+            class="edu.tum.cs.mylyn.provisioning.git.GitContributor"
+            name="edu.tum.cs.mylyn.contributor.git">
+      </contextContributor>
+   </extension>
+   <extension
+	         name="Git Contributor Startup"
+	         point="org.eclipse.ui.startup">
+	       <startup
+	             class="edu.tum.cs.mylyn.internal.provisioning.git.Activator$GitContributorStartup">
+	       </startup>
+	    </extension>
+   <extension
+         point="edu.tum.cs.mylyn.provisioning.core.elementMapper">
+      <elementMapper
+            class="edu.tum.cs.mylyn.internal.provisioning.git.GitProvisioningElementMapper">
+      </elementMapper>
+   </extension>
+</plugin>
